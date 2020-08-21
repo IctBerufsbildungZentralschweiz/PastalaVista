@@ -1,0 +1,19 @@
+.backgroundMain{
+	background-image: url("img/pasta.png");
+	background-repeat: no-repeat;
+  	background-size: cover;
+  	position: relative;
+}
+
+h1, h2{
+	font-family : sans-serif;
+	color: #FFFFFF;
+}
+
+h1{
+	font-size: 50px;
+}
+
+input {
+	margin: 10px;
+}
