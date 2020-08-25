@@ -1,25 +1,39 @@
 <?php
-
-$servername = "localhost";
-$database = "pastalavista";
-$username = "root";
-$password = "";
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $database);
-// Check connection
+require_once 'config.php';
+global $conn;
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$name = $_POST['Username'];
-$password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
-
-$sql = "INSERT INTO users(Username, Password, IsAdmin) VALUES ('$name', '$password' false)";
-if (mysqli_query($conn, $sql)) {
-    echo "New record has been added successfully !";
-} else {
-    echo "Error: " . $sql . ":-" . mysqli_error($conn);
+if(array_key_exists('Registrieren', $_POST)) {
+    $username = $_POST['username'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 15]);
+    echo $username;
+    echo $password;
+    $sql = "INSERT INTO users (USERNAME, PASSWORD, ISADMIN) VALUES ('$username', '$password', false)";
+    
+    mysqli_query($conn, $sql);
+    mysqli_close($conn);
+    
 }
-mysqli_close($conn);
 
 ?>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PastalaVista</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="backgroundMain">
+
+	<div>
+		<form method="post">
+			<input type="text" placeholder="username" name="username">
+			<input type="password" placeholder="password" name="password"> 
+			<input type="submit" name = "Registrieren" value="Registrieren" >
+		</form>
+	</div>
+
+
+</body>
+</html>

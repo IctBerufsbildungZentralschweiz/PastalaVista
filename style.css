@@ -5,7 +5,7 @@
   	position: relative;
 }
 
-h1, h2{
+h1, h2, p, label{
 	font-family : sans-serif;
 	color: #FFFFFF;
 }
