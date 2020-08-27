@@ -1,19 +1,61 @@
-.backgroundMain{
-	background-image: url("img/pasta.png");
-	background-repeat: no-repeat;
-  	background-size: cover;
-  	position: relative;
-}
-
-h1, h2, p, label{
-	font-family : sans-serif;
+h1, h2, p, label, a{
+	font-family: sans-serif;
 	color: #FFFFFF;
 }
 
-h1{
+h1 {
 	font-size: 50px;
 }
 
 input {
-	margin: 10px;
+  width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.backgroundMain {
+	background-image: url("img/pasta.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.topnav {
+  background-color: #302e50;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1% 1.2%;
+  text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #FFFFFF;
+  color: #302E50;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #C8CB77;
+  color: #FFFFFF;
+}
+.logo{
+	width: 30%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position:absolute;                  
+    bottom:0;
+	left:0;
+	right:0;
+}
+
+.center {
+	display: block;
+    text-align: center;
 }

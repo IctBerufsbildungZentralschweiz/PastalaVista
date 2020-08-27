@@ -1,3 +1,33 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PastalaVista</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="backgroundMain">
+	
+	<div class = "topnav">
+		<a href="index.php">Home</a>
+		<a class="active" href="login.php">Anmelden</a>
+		<a href="register.php">Registrieren</a>
+	</div>
+	<div class = "center">
+		<form method="post">
+			<input type="text" placeholder="username" name="username">
+			<br> 
+			<input type="password" placeholder="password" name="password"> 
+			<br>
+			<input type="submit" name="login" value="Anmelden">
+
+		</form>
+	</div>
+	<div>
+		<img alt="Logo" src="img/logo_large.png" class = "logo">
+	</div>
+
+
+</body>
+</html>
 <?php
 require_once 'config.php';
 global $conn;
@@ -30,23 +60,3 @@ if (array_key_exists('login', $_POST)) {
 }
 
 ?>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>PastalaVista</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body class="backgroundMain">
-
-	<div>
-		<form method="post">
-			<input type="text" placeholder="username" name="username"> 
-			<input type="password" placeholder="password" name="password"> 
-			<input type="submit" name="login" value="Anmelden">
-
-		</form>
-	</div>
-
-
-</body>
-</html>

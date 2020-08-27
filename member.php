@@ -74,6 +74,7 @@ if (isset($_POST['logout'])){
 
         function reserved($date)
         {
+            $date = date("d.m.Y", strtotime($_POST['pasta-date']));
             echo "<p>Pasta fuer den " . $date . " wurde reserviert. Vielen Dank</p>";
         }
 

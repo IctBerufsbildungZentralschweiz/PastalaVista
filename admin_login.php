@@ -45,7 +45,9 @@ if (array_key_exists('login', $_POST)) {
 	<div>
 		<form method="post">
 			<input type="text" placeholder="username" name="username"> 
+			<br>
 			<input type="password" placeholder="password" name="password"> 
+			<br>
 			<input type="submit" name="login" value="Anmelden">
 
 		</form>

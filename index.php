@@ -7,18 +7,13 @@
 </head>
 <body class="backgroundMain">
 
+	<div class = "topnav">
+		<a class= "active" href="index.php">Home</a>
+		<a href="login.php">Anmelden</a>
+		<a  href = "register.php">Registrieren</a>
+	</div>
 	<div>
-		<form action="login.php">
-			<input type = "submit" value="Anmelden">
-		</form>
-		
-		<form action="register.php">
-			<input type = "submit" value = "Registrieren">
-		</form>
-		
-		<form action="admin_login.php">
-			<input type = "submit" value = "Admin">
-		</form>
+		<img alt="Logo" src="img/logo_large.png" class = "logo">
 	</div>
 </body>
 </html>

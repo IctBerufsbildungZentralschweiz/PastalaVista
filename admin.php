@@ -1,3 +1,35 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PastalaVista</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="events.js"></script>
+</head>
+<body class="backgroundMain">
+
+	<div>
+		<h1>Admin bereich</h1>
+		<h2>Morgen:</h2>
+		<?php
+		  echo "<p>Fuer morgen haben sich bis jetzt ". getTomorrowsOrders() ." Leute eingetragen </p>"
+		?>
+		<h2>Anderes Datum:</h2>
+		<form method="post">
+			<?php
+                $min = date("Y-m-d", time() + 172800);
+                echo '<input type="date" name="pasta-date" value="' . $min . '" min="' . $min . '">';
+                
+            ?>
+            <br>
+            <input type="submit" name="request" value="Abfragen">
+		</form>
+		<form method = "post" >
+			<input type="submit" name="logout" value="Abmelden">
+		</form>
+	</div>
+
+</body>
+</html>
 <?php
 require_once 'config.php';
 global $conn;
@@ -40,35 +72,3 @@ if (!isset($_SESSION['usr']) || !isset($_SESSION['id']) || $_SESSION['isadmin'] 
         echo "<p> Fuer den ".$date."  haben sich bisher ". getSpecificOrders() ." Leute eingetragen </p>";
     }
 ?>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>PastalaVista</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script src="events.js"></script>
-</head>
-<body class="backgroundMain">
-
-	<div>
-		<h1>Admin bereich</h1>
-		<h2>Morgen:</h2>
-		<?php
-		  echo "<p>Fuer morgen haben sich bis jetzt ". getTomorrowsOrders() ." Leute eingetragen </p>"
-		?>
-		<h2>Anderes Datum:</h2>
-		<form method="post">
-			<?php
-                $min = date("Y-m-d", time() + 172800);
-                echo '<input type="date" name="pasta-date" value="' . $min . '" min="' . $min . '">';
-                
-            ?>
-            <br>
-            <input type="submit" name="request" value="Abfragen">
-		</form>
-		<form method = "post" >
-			<input type="submit" name="logout" value="Abmelden">
-		</form>
-	</div>
-
-</body>
-</html>
