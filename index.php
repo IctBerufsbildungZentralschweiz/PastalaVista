@@ -1,19 +1,17 @@
+
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PastalaVista</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="events.js"></script>
 </head>
-<body class="backgroundMain">
-
-	<div class = "topnav">
-		<a class= "active" href="index.php">Home</a>
-		<a href="login.php">Anmelden</a>
-		<a  href = "register.php">Registrieren</a>
-	</div>
-	<div>
-		<img alt="Logo" src="img/logo_large.png" class = "logo">
-	</div>
+<body class="backgroundMain">	
+	<?php 
+	   require_once 'navbar.php';
+	   showNavbar("index");
+        require_once 'logo_footer.php';
+    ?>
 </body>
 </html>

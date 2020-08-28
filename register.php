@@ -1,15 +1,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PastalaVista</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body class="backgroundMain">
-	<div class = "topnav">
-		<a href="index.php">Home</a>
-		<a href="login.php">Anmelden</a>
-		<a class="active" href="register.php">Registrieren</a>
-	</div>
+	<?php 
+	   require_once 'navbar.php';
+	   showNavbar("register");
+    ?>
 	<div class = "center">
 		<form method="post">
 			<input type="text" placeholder="Username" name="username">
@@ -19,10 +19,10 @@
 			<input type="submit" name = "Registrieren" value="Registrieren" >
 		</form>
 	</div>
-	<div>
-		<img alt="Logo" src="img/logo_large.png" class = "logo">
-	</div>
 
+	<?php 
+	   require_once 'logo_footer.php';
+	?>
 
 </body>
 </html>
@@ -40,23 +40,22 @@ if(array_key_exists('Registrieren', $_POST)) {
     $existing_entrys = mysqli_query($conn, $sql_check_username);
     $checkCount = mysqli_fetch_all($existing_entrys);
     if (!count($checkCount) > 0) {
-        if ($username !== ""|| $password !=="") {
+        if (trim($username) !== ""|| trim($password !=="")) {
             $password_hashed = password_hash($password, PASSWORD_DEFAULT, ['cost' => 15]);
             $sql_login = "INSERT INTO users (USERNAME, PASSWORD, ISADMIN) VALUES ('$username', '$password_hashed', false)";
             mysqli_query($conn, $sql_login);
             header("location: index.php");
         }
         else{
-            echo "<p> Username oder Passwort leer, bitte wiederholen </p>";
+            echo "<div class = \"center\" id = \"error\"><p> Username oder Passwort leer, bitte wiederholen </p></div>";
         }
     }
     else{
-        echo "<p> Username bereits vergeben </p>";
+        echo "<div class = \"center\" id = \"error\" ><p> Username bereits vergeben </p></id>";
     }
     
     
     mysqli_close($conn);
     
 }
-
 ?>

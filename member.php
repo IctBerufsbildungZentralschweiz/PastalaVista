@@ -46,12 +46,13 @@ if (isset($_POST['logout'])){
 <head>
 <meta charset="UTF-8">
 <title>PastalaVista</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="events.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body class="backgroundMain">
 
-	<div>
+	<div class = "center">
 		<h1>Pasta reservieren</h1>
 		<p>Waehle einen Tag an dem du Pasta essen willst (maximal 10 Tage im voraus, Eine Bestellung muss bis am Vortag 16:00 abgegeben werden)</p>
 		<form method="post">
@@ -75,12 +76,12 @@ if (isset($_POST['logout'])){
         function reserved($date)
         {
             $date = date("d.m.Y", strtotime($_POST['pasta-date']));
-            echo "<p>Pasta fuer den " . $date . " wurde reserviert. Vielen Dank</p>";
+            echo "<div id=\"success\" class = \"center\"><p>Pasta fuer den " . $date . " wurde reserviert. Vielen Dank</p></div>";
         }
 
         function blocked($reason)
         {
-            echo "<p>Diese Aktion ist fuer dich gesperrt. Grund: " . $reason . "</p>";
+            echo "<div id=\"error\" class = \"center\"><p>Diese Aktion ist fuer dich gesperrt. Grund: " . $reason . "</p></div>";
         }
 ?>
 	</div>
