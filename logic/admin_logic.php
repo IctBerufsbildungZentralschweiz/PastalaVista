@@ -6,7 +6,6 @@ if (!$conn) {
 }
 
 session_start();
-//!isset($_SESSION['isadmin'])
 if (!isset($_SESSION['usr']) || !isset($_SESSION['id']) || $_SESSION['isadmin'] != 1) {
     header('Location: index.php');
 }
