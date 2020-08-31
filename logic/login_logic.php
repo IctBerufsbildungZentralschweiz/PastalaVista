@@ -35,5 +35,4 @@ if (array_key_exists('login', $_POST)) {
         }
     }
 }
-
 ?>

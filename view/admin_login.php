@@ -1,5 +1,5 @@
 <?php
-    require_once '../logic/admin_logic.php';
+    require_once '../logic/admin_login_logic.php';
 ?>
 <html>
 <head>
