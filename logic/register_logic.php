@@ -16,15 +16,15 @@ if(array_key_exists('Registrieren', $_POST)) {
             $password_hashed = password_hash($password, PASSWORD_DEFAULT, ['cost' => 15]);
             $sql_login = "INSERT INTO users (USERNAME, PASSWORD, ISADMIN) VALUES ('$username', '$password_hashed', false)";
             mysqli_query($conn, $sql_login);
-            echo "<div class = \"center\" id = \"success\"><p>User wurde erstellt</p></div><br>";
+            echo "<div class = \"center success\"><p>User wurde erstellt</p></div><br>";
         }
         else{
-            echo "<div class = \"center\" id = \"error\"><p> Username oder Passwort leer, bitte wiederholen </p></div> <br>";
+            echo "<div class = \"center error\"><p> Username oder Passwort leer, bitte wiederholen </p></div> <br>";
         }
         
     }
     else{
-        echo "<div class = \"center\" id = \"error\" ><p> Username bereits vergeben </p></div> <br>";
+        echo "<div class = \"center error\"  ><p> Username bereits vergeben </p></div> <br>";
     }
     
     

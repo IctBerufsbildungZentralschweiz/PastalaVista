@@ -1,4 +1,4 @@
-h1, h2, p, label, a{
+h1, h2, p, label, a {
 	font-family: sans-serif;
 	color: #FFFFFF;
 }
@@ -8,70 +8,73 @@ h1 {
 }
 
 input {
-  width: 90%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
+	width: 90%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
 }
+
 .backgroundMain {
 	background-image: url("img/pasta.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
 .topnav {
-  background-color: #302e50;
-  overflow: hidden;
+	background-color: #302e50;
+	overflow: hidden;
 }
 
 .topnav a {
-  float: left;
-  color: #FFFFFF;
-  text-align: center;
-  padding: 1% 1.2%;
-  text-decoration: none;
+	float: left;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 1% 1.2%;
+	text-decoration: none;
 }
 
 .topnav a:hover {
-  background-color: #FFFFFF;
-  color: #302E50;
+	background-color: #FFFFFF;
+	color: #302E50;
 }
 
 .topnav a.active {
-  background-color: #C8CB77;
-  color: #FFFFFF;
+	background-color: #C8CB77;
+	color: #FFFFFF;
 }
-.logo{
+
+.logo {
 	width: 30%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	position:absolute;                  
-    bottom:0;
-	left:0;
-	right:0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
 .center {
 	display: block;
-    text-align: center;
+	text-align: center;
 }
 
-#error{
+.error {
 	border-style: solid;
 	border-color: #FF0000;
 	background-color: #FFFFFF;
 }
 
-#error p{
+.error p {
 	color: #FF0000;
 }
 
-#success{
+.success {
 	border-style: solid;
 	border-color: #007700;
 	background-color: #FFFFFF;
 }
 
-#success p{
+.success p {
 	color: #007700;
 }

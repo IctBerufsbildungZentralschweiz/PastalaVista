@@ -6,7 +6,7 @@ if (! $conn) {
 }
 if (array_key_exists('login', $_POST)) {
     if (trim($_POST['username']) === "" || trim($_POST['password']) === "") {
-        echo "<div class = \"center\" id=\"error\"><p>Username oder Passwort leer, bitte wiederholen</p></div> <br>";
+        echo "<div class = \"center error\"><p>Username oder Passwort leer, bitte wiederholen</p></div> <br>";
     } else {
         $username = $_POST['username'];
         $password_hashed = $_POST['password'];
@@ -28,10 +28,10 @@ if (array_key_exists('login', $_POST)) {
                 }
                 header('Location: member.php');
             } else {
-                echo "<div class = \"center\" id=\"error\"><p>Passwort falsch</p></div> <br>";
+                echo "<div class = \"center error\"><p>Passwort falsch</p></div> <br>";
             }
         } else {
-            echo "<div class = \"center\" id=\"error\"><p>User existiert nicht</p></div> <br>";
+            echo "<div class = \"center error\"><p>User existiert nicht</p></div> <br>";
         }
     }
 }
