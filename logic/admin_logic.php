@@ -36,6 +36,6 @@ if(isset($_POST['logout'])) {
 }
 if (isset($_POST['request'])) {
     $date = date("d.m.Y", strtotime($_POST['pasta-date']));
-    echo "<p> Fuer den ".$date."  haben sich bisher ". getSpecificOrders() ." Leute eingetragen </p>";
+    echo "<p> F&#252;r den ".$date."  haben sich bisher ". getSpecificOrders() ." Leute eingetragen </p>";
 }
 ?>

@@ -13,9 +13,11 @@
     ?>
 	<div class = "center">
 		<form method="post">
-			<input type="text" placeholder="Username" name="username">
+			<input type="text" placeholder="Username (Maximal 30 Zeichen)" name="username">
 			<br>
 			<input type="password" placeholder="Passwort" name="password"> 
+			<br>
+			<input type="password" placeholder="Passwort best&#228;tigen" name="password_conf">
 			<br>
 			<input type="submit" name = "Registrieren" value="Registrieren" >
 		</form>

@@ -11,7 +11,7 @@
 
 	<div class = "center">
 		<h1>Pasta reservieren</h1>
-		<p>Waehle einen Tag an dem du Pasta essen willst (maximal 10 Tage im voraus, eine Bestellung muss bis am Vortag 16:00 abgegeben werden)</p>
+		<p>W&#228;hle einen Tag an dem du Pasta essen willst (maximal 10 Tage im voraus, eine Bestellung muss bis am Vortag 16:00 abgegeben werden)</p>
 		<form method="post">
 			<?php
                 $currentTime = date("H");

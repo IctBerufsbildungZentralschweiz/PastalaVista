@@ -12,7 +12,7 @@
 		<h1>Admin bereich</h1>
 		<h2>Morgen:</h2>
 		<?php
-		  echo "<p>Fuer morgen haben sich bis jetzt ". getTomorrowsOrders() ." Leute eingetragen </p>"
+		  echo "<p>F&#252;r morgen haben sich bis jetzt ". getTomorrowsOrders() ." Leute eingetragen </p>"
 		?>
 		<h2>Anderes Datum:</h2>
 		<form method="post">

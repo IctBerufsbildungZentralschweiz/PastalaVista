@@ -42,12 +42,12 @@ if (isset($_POST['logout'])) {
 function reserved($date)
 {
     $date = date("d.m.Y", strtotime($_POST['pasta-date']));
-    echo "<div class = \"center success\"><p>Pasta fuer den " . $date . " wurde reserviert. Vielen Dank</p></div>";
+    echo "<div class = \"center success\"><p>Pasta f&#252;r den " . $date . " wurde reserviert. Vielen Dank</p></div>";
 }
 
 function blocked($reason)
 {
-    echo "<div class = \"center error\"><p>Diese Aktion ist fuer dich gesperrt. Grund: " . $reason . "</p></div>";
+    echo "<div class = \"center error\"><p>Diese Aktion ist f&#252;r dich gesperrt. Grund: " . $reason . "</p></div>";
 }
 
 ?>
